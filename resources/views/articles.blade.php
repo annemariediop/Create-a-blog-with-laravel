@@ -1,7 +1,7 @@
 @extends('base')
 
 @section('content')
-<div class="container-fluid" style="background-color: beige">
+<div class="container-fluid">
 <div class="jumbotron ">
     <h1 class="display-3 text-center">Articles</h1>
     <div class="articles row justify-content-center">

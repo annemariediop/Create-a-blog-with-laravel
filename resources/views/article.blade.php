@@ -1,7 +1,7 @@
 @extends('base')
 
 @section('content')
-<div class="jumbotron"  style="background-color: beige">
+<div class="jumbotron" >
     <h2 class="display-7  text-center" text-center>{{$article->title}}</h2>
     <div class="d-flex justify-content-center">
         <a class="btn btn-primary my-4  " href="{{route('articles')}}">
