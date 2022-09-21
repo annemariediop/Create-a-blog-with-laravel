@@ -16,6 +16,11 @@
 
       <ul class=" navbar-nav  " style="margin-left: auto; ">
         @if (Auth::user())
+          @if (Auth::user()->role==='ADMIN')
+          <li class="nav-item ">
+            <a class="nav-link btn-primary" href="{{route('articles.index')}}">Espace Admin </a>
+          </li
+          @endif
         <li class="nav-item "  >
           <form action="/logout" method="POST" >
             @csrf

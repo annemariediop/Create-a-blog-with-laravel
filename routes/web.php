@@ -21,4 +21,4 @@ Route::get('/articles/{slug}', [MainController::class, 'show'])->name('article')
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/admin/articles', [ArticleController::class, 'index'])->middleware('admin');;
+Route::get('/admin/articles', [ArticleController::class, 'index'])->middleware('admin')->name('articles.index');
