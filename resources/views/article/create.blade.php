@@ -8,22 +8,41 @@
         <div class="col-12">
             <div class="form-group">
                 <label for="title">Titre</label>
-                <input type="text" name="title" class="form-control" id="title" placeholder="Titre de votre article">
+                <input type="text" name="title" class="form-control @error('title') is-invalid @enderror " id="title" placeholder="Titre de votre article">
+                @error('title')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{$message}}</strong>
+                    </span>
+                    
+                @enderror
+
             </div>
         </div>
 
         <div class="col-12 mt-3 ">
             <div class="form-group">
                 <label for="subtitle">Sous-Titre</label>
-                <input type="text" name="subtitle" class="form-control" id="subtitle" placeholder="Sous-Titre de votre article">
-                <small class="form-text text-muted">Décrivez le contenu de votre article</small>
+                <input type="text" name="subtitle" class="form-control @error('subtitle') is-invalid @enderror " id="subtitle" placeholder="Sous-Titre de votre article">
+                <small class="form-text text-muted">Décrivez le contenu de votre article</small><br>
+                @error('subtitle')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{$message}}</strong>
+                </span>
+                
+            @enderror
             </div>
         </div>
 
         <div class="col-12 mt-3">
             <div class="form-group">
                 <label for="content">Contenu</label>
-              <textarea name="content" id="tinymce"  class=" form-control w-100"></textarea>
+              <textarea name="content" id="tinymce"  class=" form-control w-100 @error('content') is-invalid @enderror "></textarea>
+              @error('content')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{$message}}</strong>
+              </span>
+              
+          @enderror
             </div>
             <script>
                 tinymce.init({
