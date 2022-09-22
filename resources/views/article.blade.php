@@ -12,6 +12,6 @@
     <h5 class="text-center my-4 ">{{ $article->subtitle}}</h5>
   </div>
   <div class="container">
-    <p class="text-center mt-5"> {{$article->content}}</p>
+    <p class="text-center mt-5"> {!! $article->content !!}</p>
   </div>
 @endsection

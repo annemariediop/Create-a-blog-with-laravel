@@ -22,3 +22,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/admin/articles', [ArticleController::class, 'index'])->middleware('admin')->name('articles.index');
+Route::get('/admin/articles/create', [ArticleController::class, 'create'])->middleware('admin')->name('articles.create');
+Route::post('/admin/articles/store', [ArticleController::class, 'store'])->middleware('admin')->name('articles.store');
