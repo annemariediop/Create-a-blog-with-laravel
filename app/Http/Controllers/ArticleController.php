@@ -47,7 +47,7 @@ class ArticleController extends Controller
             'content'=> $request-> input('content'),
             
           ]);
-          return redirect()-> route('articles.index');
+          return redirect()-> route('articles.index')->with('success', 'Votre article a été bien enregistré.');
     }
 
     /**

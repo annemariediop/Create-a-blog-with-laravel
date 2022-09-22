@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container" >
+    
     <h1 class="text-center my-5">Articles</h1>
     <div class="d-flex justify-content-center">
         <a href="{{route('articles.create')}}" class="btn btn-info  my-2"> <i class="fas fa-plus"></i> Ajouter un article</a>

@@ -13,7 +13,11 @@
   </head>
   <body>
    @include('incs.navbar')
+ 
+   <div class="container justify-content-center">
 
+    @include('incs.flash')
+   </div>
    @yield('content')
 
     <!-- Optional JavaScript -->
